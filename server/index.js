@@ -7,11 +7,11 @@ const port= process.env.PORT || 3000;
 app.use(cors());
 app.use("/forecasts", router);
 
-app.use(express.static("public"));
-
 app.get("*", (req, res) => {
     res.send("HEY, not valid endpoint!");
   });
+
+  
 app.listen(port, () => {
     console.log(`app is listening on port ${port}`);
 });

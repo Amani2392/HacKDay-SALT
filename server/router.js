@@ -1,4 +1,4 @@
-import express, { response } from "express";
+import express from "express";
 import fetch from "node-fetch";
 
 let key = "ec21538dedf1edd86dcec39eef5bb504";
@@ -13,9 +13,9 @@ router.get("/:locationName", (req, res) => {
   fetch(url)
     .then((r) => r.json())
     .then((d) => {
-        res.setHeader("Access-Control-Allow-Origin", "*");
-        res.send(d);
-        city = d[0].city;
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.send(d);
+      city = d[0].city;
     })
     .catch((err) => {
       console.log(err);
