@@ -13,8 +13,9 @@ const [result, setResults] = useState([]);
     .then(response => {
     setResults(response.data.results);
     input.value='';
-    })
+    }
   };
+
   return (
     <div>
     <form onSubmit={addCityHandler}>

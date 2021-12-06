@@ -15,6 +15,7 @@ const [result, setResults] = useState([]);
     input.value='';
     })
   };
+
   return (
     <div>
     <form onSubmit={addCityHandler}>

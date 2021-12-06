@@ -17,6 +17,31 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data));
   });
+  const showTime = (timestamp) => {
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    let now = new Date(timestamp);
+
+    let weekDay = days[now.getDay()];
+    let hour = now.getHours();
+    if (hour < 10) {
+      hour = `0${hour}`;
+    }
+    let minute = now.getMinutes();
+    if (minute < 10) {
+      minute = `0${minute}`;
+    }
+
+    return `${weekDay} ${hour}:${minute}`;
+  };
   return (
     <div className="App">
       <h1 className='weather-app'> 🌦Weather App </h1>
@@ -26,7 +51,8 @@ function App() {
           <div className="row">
             <div className="col">
               <h2 id="city">{!data ? "Loading..." : data.name}</h2>
-              <h3 id='main'> {!data ? "Loading..." : data.weather[0].main} </h3>   
+              <h3 id='main'> {!data ? "Loading..." : data.weather[0].main} </h3>
+              
             </div>
             <div className="row">
               <div className="col">
