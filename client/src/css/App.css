@@ -60,26 +60,26 @@ footer {
   opacity: 0.5;
   margin-left: 8px;
 }
-#city {
+.city {
   margin-bottom: 0;
 }
-#main{
+.main{
   margin-top: 0;
 }
 
 
-#description, 
-#wind,
-#humidity {
+.description, 
+.wind,
+.humidity {
   text-transform: capitalize;
   margin: 3px
 }
 
-#temperature {
+.temperature {
   font-size: 32px;
 }
 
-#forecast {
+.forecast {
   text-align: center;
 }
 .col{
