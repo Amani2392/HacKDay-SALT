@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Form from "./components/Form.js";
 import CityInfo from "./components/CityInfo.js";
 import "../src/css/App.css";
+//before running  npm start run set NODE_OPTIONS=--openssl-legacy-provider
 const App = () => {
   const [query, setQuery] = useState("stockholm");
   const [data, setData] = useState(null);
